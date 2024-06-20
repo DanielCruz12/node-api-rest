@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsnd --respawn --clear src/server.ts",
-    "lint": "eslint 'src/**/*.{js,ts}'",
-    "prepare": "husky install"
+    "lint": "eslint . --ext .js,.mjs --fix --ignore-path .gitignore",
+    "prepare": "husky install",
+    "format": "prettier .  --write"
   },
   "author": "",
   "license": "ISC",
