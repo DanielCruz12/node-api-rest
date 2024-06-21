@@ -2,7 +2,7 @@
 const sayHello = (name: string): string => {
   const h = 1
 
-  return `Hello, ${name}!`;
-};
+  return `Hello, ${name}!`
+}
 
-console.log(sayHello('World'));
+console.log(sayHello('World'))
