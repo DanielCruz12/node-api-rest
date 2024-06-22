@@ -4,16 +4,15 @@ import prisma from '../models/user';
 import { hasPassword } from '../services/passwordService';
 
 
-export const getAllUsers = async (res: Response): Promise<void> => {
+export const getAllUsers = async (req: Request, res: Response): Promise<void> => {
     try {
         const users = await prisma.findMany()
-        res.status(200).json(users)
-    } catch (error) {
+        res.status(200).json(users);
+    } catch (error: any) {
         console.log(error)
-        res.status(500).json({ error: 'Hubo un error' })
+        res.status(500).json({ error: 'Hubo un error, pruebe más tarde' })
     }
 }
-
 export const createUser = async (req: Request, res: Response): Promise<void> => {
     try {
         const { email, password } = req.body
