@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'no-unused-vars': 'error',
     'generator-star-spacing': 'off',
+    'prettier/prettier': 0,
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
 }
